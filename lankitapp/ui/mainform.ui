@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Lankit menu</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -45,9 +45,9 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
-        <widget class="QGroupBox" name="groupHostInfo">
+        <widget class="QGroupBox" name="groupIndexInfo">
          <property name="title">
-          <string>Host information</string>
+          <string>Index information</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
@@ -60,24 +60,21 @@
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_4">
           <item>
-           <widget class="QGraphicsView" name="graphicsViewBanner">
+           <widget class="QLabel" name="labelBannerImage">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="minimumSize">
+            <property name="maximumSize">
              <size>
-              <width>227</width>
-              <height>192</height>
+              <width>200</width>
+              <height>200</height>
              </size>
             </property>
-            <property name="baseSize">
-             <size>
-              <width>227</width>
-              <height>192</height>
-             </size>
+            <property name="text">
+             <string/>
             </property>
            </widget>
           </item>
@@ -97,13 +94,6 @@
               </property>
              </widget>
             </item>
-            <item row="3" column="1">
-             <widget class="QLabel" name="labelMaintainerValue">
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
             <item row="3" column="0">
              <widget class="QLabel" name="labelMaintainerLabel">
               <property name="text">
@@ -111,7 +101,37 @@
               </property>
              </widget>
             </item>
+            <item row="3" column="1">
+             <widget class="QLabel" name="labelMaintainerValue">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
            </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupDealerInfo">
+         <property name="title">
+          <string>Dealer information</string>
+         </property>
+         <layout class="QFormLayout" name="formLayout_2">
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelDealerNameLabel">
+            <property name="text">
+             <string>Name</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="labelDealerNameValue">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>

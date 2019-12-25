@@ -38,16 +38,16 @@ class GameIndex(object):
         # If everything went fine:
         self._index = index
 
-        logging.info("Loaded index containing {} entries".format(self.gameCount))
+        logging.info("Loaded index containing {} entries".format(self.game_count))
 
-    def getGameList(self):
+    def get_game_list(self):
         return {k: v['name'] for k, v in self._index['games'].items()}
 
-    def getGameInfo(self, _id):  # we use strings defined by the maintainer to identify games
+    def get_game_info(self, _id):  # we use strings defined by the maintainer to identify games
         return self._index["games"][_id]
 
     @property
-    def isLoaded(self):
+    def is_loaded(self):
         return self._index is not None
 
     @property
@@ -82,11 +82,5 @@ class GameIndex(object):
             return None
 
     @property
-    def gameCount(self):
+    def game_count(self):
         return len(self._index['games'])
-
-    @property
-    def rawGameIndex(self):
-        return self._index
-
-
